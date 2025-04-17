@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, Wallet, Bell, Briefcase, ArrowRight, TrendingUp, ChevronRight, Trophy, LogIn } from 'lucide-react';
@@ -13,6 +15,7 @@ import { MetaMaskService } from './utils/metamask';
 import { CryptoData, PredictionInput } from './types';
 import { useAuth } from './context/AuthContext';
 import toast from 'react-hot-toast';
+
 
 const predictionModel = new CryptoPredictionModel();
 const metaMaskService = new MetaMaskService();

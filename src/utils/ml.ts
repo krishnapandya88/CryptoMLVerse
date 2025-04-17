@@ -1,4 +1,30 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import axios from 'axios';
+class DummyDDQN {
+  private model: any;
+  private targetModel: any;
+  
+
+  constructor() {
+    this.model = "DDQN_Model"; // Placeholder
+    this.targetModel = "DDQN_Target"; // Placeholder
+  }
+
+  train() {
+    console.log("Training DDQN... (not really)");
+  }
+
+  predict(state: number[]): number {
+    console.log("Predicting action using DDQN... (fake)");
+    return Math.random() > 0.5 ? 1 : 0; // Random action
+  }
+}
+
+const ddqnAgent = new DummyDDQN();
+ddqnAgent.train();
+const action = ddqnAgent.predict([1, 2, 3]); // Fake input
+console.log("DDQN Chosen Action:", action);
 
 // Simplified prediction model without TensorFlow.js
 export class CryptoPredictionModel {
@@ -17,6 +43,7 @@ export class CryptoPredictionModel {
         {
           params: {
             vs_currency: 'usd',
+
             days: 30, // Reduced from 365 to 30 days for faster loading
             interval: 'daily'
           }
